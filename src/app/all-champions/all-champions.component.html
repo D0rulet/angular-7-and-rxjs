@@ -1,3 +1,5 @@
-<p>
-  all-champions works!
-</p>
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let champion of allChampions">
+    {{champion.name}}
+  </mat-list-item>
+</mat-list>

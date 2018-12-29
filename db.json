@@ -1,7 +1,60 @@
 {
-  "heroes": [
-    {"name": "Iulia"},
-    {"name": "Catwoman"},
-    {"name": "Asa Akira"}
+  "champions": [
+    {
+      "name": "Iulia",
+      "type": "Wife",
+      "creator": "The Sea",
+      "age": 35,
+      "quote": "Vezi ca ma enervezi!",
+      "realm": "a'Itch"
+    },
+    {
+      "name": "Catwoman",
+      "type": "Agile",
+      "creator": "Batwoman",
+      "age": 25,
+      "quote": "Mi leather is su leather.",
+      "realm": "a'Itch"
+    },
+    {
+      "name": "Asa Akira",
+      "type": "Windy",
+      "creator": "The Internet",
+      "age": 18,
+      "quote": "I thought, but then it did not matter.",
+      "realm": "a'Itch"
+    }
+  ],
+  "realms": [
+    {
+      "name": "Alion",
+      "population": 289000,
+      "leader": "Lord Oudrak",
+      "lore": "There are many realms under one Sun, but Alion is by far the richest. Rivers padded with saphires, mountain tops of gold, canyons filled with diamonds. People love their leader, they adore their beautiful land and spare no second for trivial activities. Always engaged in scientific research, they remain blind to the potential of their land. Alions learned to take advantage of the other panns because they all seem to be obsessed with shiny pebbles. They rely on neighbour panns for everything except reasearch."
+    },
+    {
+      "name": "Domaen",
+      "population": 28000000,
+      "leader": "Lord Mindal",
+      "lore": "As old as the first Pann, the Domeanae are keepers of faith and tradition. They are boringly predictable and that is precisely why they are the best business partners of the Alions. Always keeping themselves on a moral high ground, they are very easy to take advantage of. \"All you need to build a house is 10 Domeanae and a tale of honor\""
+    },
+    {
+      "name": "Kireon",
+      "population": 28000000,
+      "leader": "Lord Kasila",
+      "lore": "Kireons have been banished by all other panns but a'Itchins. They can show you everything beautiful from within your soul. There is no chance to fight it, you are Narcis now. People who meet Kireons live without friends, without care, without purpose. Even though you will be happily in love for the rest of your life, your loved ones will mourn you as if you were dead."
+    },
+    {
+      "name": "Fogaran",
+      "population": 28000000,
+      "leader": "Lord Ilkhe",
+      "lore": "All the mountains under one Sun are inhabited by Fogarans. Panns with a hobby, they like to look at the stars. There is nothing more important to them than a clear night sky. Master crafters of sky readers and sky maps, they believe all our life secrets are hidden in their maps. Do not expect to reach an agreement with a Forgaran unless his map says so."
+    },
+    {
+      "name": "a'Itch",
+      "population": 8220480101,
+      "leader": "Lord Itido",
+      "lore": "Some say it was a long time in the making, others think it was divine intervention. How a'Itchins got here, it is not important. Cunning and deceitful with other panns, without realising, they became their own greatest enemy. They built their own blind spots and adhere to them religiously. Otherwise how would they be able to deceit themselves for millenia? Hardly understood by other panns, a'Itchins stand as the great survivors of their own demise."
+    }
   ]
 }
