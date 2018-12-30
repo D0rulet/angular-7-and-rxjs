@@ -1,5 +1,33 @@
-<mat-list role="list">
-  <mat-list-item role="listitem" *ngFor="let champion of allChampions">
-    {{champion.name}}
-  </mat-list-item>
-</mat-list>
+<div class="all-champions">
+  <mat-accordion>
+    <mat-expansion-panel
+    *ngFor="let champion of allChampions; let i = index"
+    (opened)="getChampionInfo(i)">
+      <mat-expansion-panel-header>
+        <mat-panel-title> {{champion}} </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-list *ngIf="champ">
+          <h3 mat-subheader>Champion Type:</h3>
+        <mat-list-item>
+          <h4 mat-line>{{champ.type}}</h4>
+        </mat-list-item>
+        <h3 mat-subheader>Champion Creator:</h3>
+        <mat-list-item>
+          <h4 mat-line>{{champ.creator}}</h4>
+        </mat-list-item>
+        <h3 mat-subheader>Champion Age:</h3>
+        <mat-list-item>
+          <h4 mat-line>{{champ.age}}</h4>
+        </mat-list-item>
+        <h3 mat-subheader>Champion Quote:</h3>
+        <mat-list-item>
+          <h4 mat-line>{{champ.quote}}</h4>
+        </mat-list-item>
+        <h3 mat-subheader>Champion Realm:</h3>
+        <mat-list-item>
+          <h4 mat-line>{{champ.realm}}</h4>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

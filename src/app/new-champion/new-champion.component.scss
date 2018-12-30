@@ -1,11 +1,18 @@
-.new-champion {
-  &__field {
-    width: 100%;
+.new-champion__card {
+  width: 60vw;
+  margin-left: 20vw;
+  &__image {
+    background-image: url('https://vignette.wikia.nocookie.net/leagueoflegends/images/a/a6/Lee_Sin_God_Fist_Promo.png/revision/latest?cb=20170421233657');
+    background-size: cover;
+    background-position-x: 50%;
   }
-}
-
-.example-header-image {
-  background-image: url('https://vignette.wikia.nocookie.net/leagueoflegends/images/a/a6/Lee_Sin_God_Fist_Promo.png/revision/latest?cb=20170421233657');
-  background-size: cover;
-  background-position-x: 50%;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .mat-form-field {
+      width: 100%;
+    }
+  }
 }

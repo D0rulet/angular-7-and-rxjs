@@ -1,15 +1,38 @@
 
-<mat-card class="example-card">
+<mat-card class="new-champion__card">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
+      <div mat-card-avatar class="new-champion__card__image"></div>
       <mat-card-title>Create New Champion</mat-card-title>
-      <mat-card-subtitle>League of Legends</mat-card-subtitle>
+      <mat-card-subtitle>Make It Inspiring</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <form>
+      <form class="new-champion__card__form">
         <mat-form-field appearance="outline">
           <mat-label>Champion Name</mat-label>
-          <input matInput placeholder="Champion Name">
+          <input matInput autocomplete="off">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Champion Type</mat-label>
+          <input matInput autocomplete="off">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Champion Creator</mat-label>
+          <input matInput autocomplete="off">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Champion Age</mat-label>
+          <input type="number" matInput autocomplete="off">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Champion Quote</mat-label>
+          <input matInput autocomplete="off">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="Realm" [(ngModel)]="selectedRealm" name="realm">
+            <mat-option *ngFor="let realm of realms" [value]="realm.name">
+              {{realm.name}}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
       </form>
     </mat-card-content>

@@ -1,6 +1,7 @@
 {
   "champions": [
     {
+      "id": 0,
       "name": "Iulia",
       "type": "Wife",
       "creator": "The Sea",
@@ -9,6 +10,7 @@
       "realm": "a'Itch"
     },
     {
+      "id": 1,
       "name": "Catwoman",
       "type": "Agile",
       "creator": "Batwoman",
@@ -17,6 +19,7 @@
       "realm": "a'Itch"
     },
     {
+      "id": 2,
       "name": "Asa Akira",
       "type": "Windy",
       "creator": "The Internet",
@@ -24,6 +27,9 @@
       "quote": "I thought, but then it did not matter.",
       "realm": "a'Itch"
     }
+  ],
+  "championsNames": [
+    "Iulia", "Catwoman", "Asa Akira"
   ],
   "realms": [
     {

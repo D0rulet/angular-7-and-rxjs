@@ -5,5 +5,5 @@ export class Champion {
   creator: string;
   age: number;
   quote: string;
-  realm: "Alion" | "Domaen" | "Kireon" | "Fogaran";
+  realm: "Alion" | "Domaen" | "Kireon" | "Fogaran" | "a'Itch";
 }
