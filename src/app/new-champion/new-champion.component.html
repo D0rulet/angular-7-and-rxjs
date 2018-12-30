@@ -1,42 +1,106 @@
-
-<mat-card class="new-champion__card">
-    <mat-card-header>
-      <div mat-card-avatar class="new-champion__card__image"></div>
-      <mat-card-title>Create New Champion</mat-card-title>
-      <mat-card-subtitle>Make It Inspiring</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <form class="new-champion__card__form">
-        <mat-form-field appearance="outline">
-          <mat-label>Champion Name</mat-label>
-          <input matInput autocomplete="off">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Champion Type</mat-label>
-          <input matInput autocomplete="off">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Champion Creator</mat-label>
-          <input matInput autocomplete="off">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Champion Age</mat-label>
-          <input type="number" matInput autocomplete="off">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Champion Quote</mat-label>
-          <input matInput autocomplete="off">
-        </mat-form-field>
-        <mat-form-field>
-          <mat-select placeholder="Realm" [(ngModel)]="selectedRealm" name="realm">
-            <mat-option *ngFor="let realm of realms" [value]="realm.name">
-              {{realm.name}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </form>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button>ADD</button>
-    </mat-card-actions>
-  </mat-card>
+<mat-card class="new-champion__card" [hidden]="submitted">
+  <mat-card-header>
+    <div mat-card-avatar class="new-champion__card__image"></div>
+    <mat-card-title>Create New Champion</mat-card-title>
+    <mat-card-subtitle>Make It Inspiring</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form
+      name="championForm"
+      class="new-champion__card__form"
+      (ngSubmit)="onSubmit()"
+      #championForm="ngForm"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          required
+          autocomplete="off"
+          [(ngModel)]="newChampion.name"
+          name="name"
+          #name="ngModel"
+        />
+        <div [hidden]="name.valid || name.pristine">
+          Your champion must have a name
+        </div>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Type</mat-label>
+        <input
+          matInput
+          required
+          autocomplete="off"
+          [(ngModel)]="newChampion.type"
+          name="type"
+          #type="ngModel"
+        />
+        <div [hidden]="type.valid || type.pristine">
+          Your champion must have a type
+        </div>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Creator</mat-label>
+        <input
+          matInput
+          required
+          autocomplete="off"
+          [(ngModel)]="newChampion.creator"
+          name="creator"
+          #creator="ngModel"
+        />
+        <div [hidden]="creator.valid || creator.pristine">
+          Your champion must have a creator
+        </div>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Age</mat-label>
+        <input
+          type="number"
+          required
+          matInput
+          autocomplete="off"
+          [(ngModel)]="newChampion.age"
+          name="age"
+          #age="ngModel"
+        />
+        <div [hidden]="age.valid || age.pristine">Age is just a number</div>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Quote</mat-label>
+        <input
+          matInput
+          required
+          autocomplete="off"
+          [(ngModel)]="newChampion.quote"
+          name="quote"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select
+          placeholder="Realm"
+          [(ngModel)]="newChampion.realm"
+          name="realm"
+        >
+          <mat-option *ngFor="let realm of realms" [value]="realm.name">
+            {{ realm.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button
+        type="submit"
+        mat-raised-button
+        [disabled]="!championForm.form.valid"
+      >
+        Submit
+      </button>
+      <button
+        type="button"
+        mat-raised-button
+        (click)="newChampion(); championForm.reset()"
+      >
+        New Champion
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

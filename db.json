@@ -1,35 +1,33 @@
 {
   "champions": [
     {
-      "id": 0,
       "name": "Iulia",
-      "type": "Wife",
-      "creator": "The Sea",
-      "age": 35,
-      "quote": "Vezi ca ma enervezi!",
-      "realm": "a'Itch"
+      "type": "Couch Creature",
+      "creator": "Ice Cream",
+      "age": 30,
+      "quote": "She did not have enough money to get a pretty lawyer",
+      "realm": "a'Itch",
+      "id": 1
     },
     {
-      "id": 1,
-      "name": "Catwoman",
-      "type": "Agile",
-      "creator": "Batwoman",
-      "age": 25,
-      "quote": "Mi leather is su leather.",
-      "realm": "a'Itch"
-    },
-    {
-      "id": 2,
-      "name": "Asa Akira",
-      "type": "Windy",
-      "creator": "The Internet",
-      "age": 18,
-      "quote": "I thought, but then it did not matter.",
-      "realm": "a'Itch"
+      "name": "Doru",
+      "type": "Couch",
+      "creator": "Doru",
+      "age": 44,
+      "quote": "If only there was more time",
+      "realm": "a'Itch",
+      "id": 2
     }
   ],
   "championsNames": [
-    "Iulia", "Catwoman", "Asa Akira"
+    {
+      "name": "Iulia",
+      "id": 1
+    },
+    {
+      "name": "Doru",
+      "id": 2
+    }
   ],
   "realms": [
     {

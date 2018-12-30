@@ -1,10 +1,10 @@
 <div class="all-champions">
   <mat-accordion>
     <mat-expansion-panel
-    *ngFor="let champion of allChampions; let i = index"
-    (opened)="getChampionInfo(i)">
+    *ngFor="let champion of allChampions"
+    (opened)="getChampionInfo(champion.id)">
       <mat-expansion-panel-header>
-        <mat-panel-title> {{champion}} </mat-panel-title>
+        <mat-panel-title> {{champion.name}} </mat-panel-title>
       </mat-expansion-panel-header>
       <mat-list *ngIf="champ">
           <h3 mat-subheader>Champion Type:</h3>

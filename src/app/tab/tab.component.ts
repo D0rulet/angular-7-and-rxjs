@@ -12,4 +12,7 @@ export class TabComponent implements OnInit {
   ngOnInit() {
   }
 
+  trigger() {
+    console.log("e");
+  }
 }

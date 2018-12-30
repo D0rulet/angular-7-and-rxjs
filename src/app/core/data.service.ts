@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 
 import { Champion } from '../models/champion'
 import { Realm } from '../models/realm'
+import { ChampionName } from '../models/championName';
 
 @Injectable()
 export class DataService {
@@ -31,19 +32,11 @@ export class DataService {
   }
 
   addChampion(newChampion: Champion): Observable<Champion> {
-    return this.http.post<Champion>('http://localhost:3000/champions', newChampion, {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    })
+    return this.http.post<Champion>('http://localhost:3000/champions', newChampion)
   }
 
-  addChampionName(newChampion: string): Observable<string> {
-    return this.http.post<string>('http://localhost:3000/championsNames', newChampion, {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    })
+  addChampionName(newChampionName: ChampionName): Observable<ChampionName> {
+    return this.http.post<ChampionName>('http://localhost:3000/championsNames', newChampionName)
   }
 
   // updateChampion(updatedChampion: Champion) { }
